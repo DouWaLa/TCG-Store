@@ -61,7 +61,7 @@ function updateQuantity(id, change) {
         if (typeof change === 'number') {
             item.quantity += change;
             if (item.quantity < 1)
-               do removeFromCart(); // Đảm bảo số lượng không âm
+                function removeFromCart(); // Đảm bảo số lượng không âm
         } else {
             item.quantity = parseInt(change) || 1; // Nếu không hợp lệ, gán là 1
         }
