@@ -60,7 +60,7 @@ function updateQuantity(id, change) {
     if (item) {
         if (typeof change === 'number') {
             item.quantity += change;
-            if (item.quantity < 1) (item.quantity = 1) ; // Đảm bảo số lượng không âm
+            if (item.quantity < 1) (item.quantity = 1); // Đảm bảo số lượng không âm
         } else {
             item.quantity = parseInt(change) || 1; // Nếu không hợp lệ, gán là 1
         }
@@ -70,7 +70,6 @@ function updateQuantity(id, change) {
 }
 
 // Xóa sản phẩm khỏi giỏ hàng
-
 function removeFromCart(id) {
     cart = cart.filter(item => item.id !== id);
     localStorage.setItem('cart', JSON.stringify(cart));
