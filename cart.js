@@ -58,7 +58,7 @@ function displayCart() {
 function updateQuantity(id, change) {
     const item = cart.find(item => item.id === id);
     if (item) {
-        if (typeof change === 'number') {
+        if (typeof change === 'number') 
             item.quantity += change;
             if (item.quantity < 1) (item.quantity = 1); // Đảm bảo số lượng không âm
         } else {
