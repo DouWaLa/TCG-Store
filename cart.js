@@ -60,7 +60,7 @@ function updateQuantity(id, change) {
     if (item) {
         if (typeof change === 'number') {
             item.quantity += change;
-            if (item.quantity < 1)
+            if (item.quantity < 1) {
                 do removeFromCart(id); // Đảm bảo số lượng không âm
         } else {
             item.quantity = parseInt(change) || 1; // Nếu không hợp lệ, gán là 1
